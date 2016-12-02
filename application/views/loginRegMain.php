@@ -18,8 +18,7 @@
 		</div>
 		<div id="register">
 			or Register<form action="register" method="post">
-				First Name: <input type="text" name="firstName" value="" placeholder="First Name"><br>
-				Last Name: <input type="text" name="lastName" value="" placeholder="Last Name"><br>
+				Name: <input type="text" name="Name" value="" placeholder="Name"><br>
 				Email Address: <input type="text" name="emailReg" value="" placeholder="Email Address"><br>
 				Password: <input type="password" name="password" value=""><br>
 				Confirm Password: <input type="password" name="passwordConfirm" value=""><br>

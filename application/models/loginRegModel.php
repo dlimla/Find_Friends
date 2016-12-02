@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-class loginRegModel extends CI_Model 
+class LoginRegModel extends CI_Model 
 {
 	public function LoginUser($post)
 	{
@@ -23,9 +23,9 @@ class loginRegModel extends CI_Model
 	public function addNewUser($post)
 	{		
 		//make sure that when you write this query you match the TABLE name not the database name that's a common mistake you noob
-		$query = "INSERT INTO users (first_name, last_name, email, password, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)";
+		$query = "INSERT INTO users (name, email, password, created_at, updated_at) VALUES (?, ?, ?, ?, ?)";
 		//this line fills all the post data to the cooresponding user colmns 
-		$values = array($post['firstName'], $post['lastName'], $post['emailReg'], $post['password'], 'NOW()', 'NOW()');
+		$values = array($post['Name'], $post['emailReg'], $post['password'], 'NOW()', 'NOW()');
 
 		$this->db->query($query, $values);
 	}

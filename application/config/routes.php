@@ -1,27 +1,27 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-//---------------standard routes -----------------------
+//-----------standard routes ---------------
 
-$route['default_controller'] = 'loginRegCtrl';
+$route['default_controller'] = 'LoginRegCtrl';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//---------------- register routes ---------------------
+//----------- register routes --------------
 
-//this route takes the user to the successful controller which inserts the data into the database
-$route['register'] = 'loginRegCtrl/regValidation';
+$route['register'] = 'LoginRegCtrl/regValidation';
 
-//then when the user pushes "log in" this route takes the userto log in as a new user to log in
-$route['regToLogin'] = 'loginRegCtrl/regToLogin';
+$route['regToLogin'] = 'LoginRegCtrl/regToLogin';
 
-//------------------ login routes ----------------------
+//------------- login routes --------------
 
-//this route sends the post data from the main page to the loginvalidation method to check if the user is in the system
-$route['login'] = 'loginRegCtrl/loginValidation';
+$route['login'] = 'LoginRegCtrl/loginValidation';
 
-$route['logOffUser'] = 'loginRegCtrl/logOffUser';
+$route['logOffUser'] = 'LoginRegCtrl/logOffUser';
 
-//------------------------------------------------------
+//---------------------------------
+$route['remove/(:any)'] = 'FriendsCtrl/removeFriend/$1';
 
+$route['show/(:any)'] = 'FriendsCtrl/showProfile/$1';
+$route['home'] = 'FriendsCtrl';
 
